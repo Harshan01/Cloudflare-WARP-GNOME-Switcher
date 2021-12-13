@@ -1,0 +1,12 @@
+{
+    "name" : "Cloudflare 1.1.1.1 WARP Switcher",
+    "description" : "Unofficial Cloudflare 1.1.1.1 WARP Switcher extension for GNOME shell",
+    "shell-version" : [
+        "3.36",
+        "3.38",
+        "40"
+    ],
+    "url" : "",
+    "uuid" : "cloudflare-warp-gnome@harshan01",
+    "version" : 1.0
+}
