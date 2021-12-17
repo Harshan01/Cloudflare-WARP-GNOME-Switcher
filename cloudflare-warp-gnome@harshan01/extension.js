@@ -129,13 +129,17 @@ const WARPSwitcher = GObject.registerClass(
 
 
 function init() {
+    log("Extension initialized");
+}
+
+function enable() {
     // Check if warp-cli is installed and if "warp-cli status" is "success"
     try {
         let proc = Gio.Subprocess.new(
             ['which', 'warp-cli'],
             Gio.SubprocessFlags.STDOUT_PIPE | Gio.SubprocessFlags.STDERR_PIPE
         );
-
+    
         let [ok, stdout, stderr] = proc.communicate_utf8(null, null);
         if (ok) {
             log(stdout);
@@ -145,14 +149,11 @@ function init() {
             logError(stderr);
             throw new Error(stderr);
         }
+        WARPSwitcherIndicator = new WARPSwitcher();
+        Main.panel.addToStatusArea(IndicatorName, WARPSwitcherIndicator);
     } catch (e) {
         logError(e);
     }
-}
-
-function enable() {
-    WARPSwitcherIndicator = new WARPSwitcher();
-    Main.panel.addToStatusArea(IndicatorName, WARPSwitcherIndicator);
 }
 
 function disable() {
