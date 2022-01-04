@@ -1,4 +1,13 @@
 {
+    "globals": {
+        "imports": "readonly",
+        "log": "readonly",
+        "logError": "readonly",
+        "print": "readonly",
+        "printerr": "readonly",
+        "window": "readonly",
+        "console": "readonly"
+    },
     "env": {
         "browser": true,
         "es6": true

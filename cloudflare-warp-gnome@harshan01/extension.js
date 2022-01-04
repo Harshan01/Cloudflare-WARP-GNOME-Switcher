@@ -128,10 +128,12 @@ const WARPSwitcher = GObject.registerClass(
     });
 
 
+// eslint-disable-next-line no-unused-vars
 function init() {
-    log("Extension initialized");
+    log('Extension initialized');
 }
 
+// eslint-disable-next-line no-unused-vars
 function enable() {
     // Check if warp-cli is installed and if "warp-cli status" is "success"
     try {
@@ -156,6 +158,7 @@ function enable() {
     }
 }
 
+// eslint-disable-next-line no-unused-vars
 function disable() {
     WARPSwitcherIndicator.destroy();
     WARPSwitcherIndicator = null;
