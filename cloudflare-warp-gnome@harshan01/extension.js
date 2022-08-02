@@ -127,7 +127,6 @@ const WARPSwitcher = GObject.registerClass(
         }
     });
 
-
 // eslint-disable-next-line no-unused-vars
 function init() {
     log('Extension initialized');
