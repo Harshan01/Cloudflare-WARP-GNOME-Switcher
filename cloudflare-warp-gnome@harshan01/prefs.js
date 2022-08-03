@@ -5,6 +5,7 @@ const GObject = imports.gi.GObject;
 const Gtk = imports.gi.Gtk;
 
 const ExtensionUtils = imports.misc.extensionUtils;
+const schema = ExtensionUtils.getCurrentExtension().metadata['settings-schema'];
 
 // eslint-disable-next-line no-unused-vars
 function init () {}
@@ -27,7 +28,7 @@ const WARPSwitcherPrefsWidget = GObject.registerClass(
             this.set_spacing(15);
             this.set_orientation(Gtk.Orientation.VERTICAL);
 
-            const settings = ExtensionUtils.getSettings('org.gnome.shell.extensions.cloudflare-warp-switcher.gschema');
+            const settings = ExtensionUtils.getSettings(schema);
 
             this.connect('destroy', Gtk.main_quit);
 

@@ -15,7 +15,7 @@ const _ = Gettext.gettext;
 const ExtensionUtils = imports.misc.extensionUtils;
 const Me = ExtensionUtils.getCurrentExtension();
 
-const Convenience = Me.imports.convenience;
+const schema = Me.metadata['settings-schema'];
 
 const IndicatorName = 'Cloudflare 1.1.1.1 WARP Switcher';
 const DisconnectedIconName = 'warp-off-icon';
@@ -36,7 +36,7 @@ const WARPSwitcher = GObject.registerClass(
         _init() {
             super._init(null, IndicatorName);
 
-            this.settings = Convenience.getSettings();
+            this.settings = ExtensionUtils.getSettings(schema);
 
             this.settingsChangedId = this.settings.connect('changed', this._onSettingsChange.bind(this));
 
