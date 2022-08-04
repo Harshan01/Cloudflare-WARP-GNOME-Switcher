@@ -11,6 +11,7 @@ Disconnected
 Connected
 
 ![./samples/connected.png](./samples/connected.png)
+---
 
 ### Prerequisites
 
@@ -18,10 +19,14 @@ This extension needs `warp-cli` installed and registered. If not, follow the ste
 * Install `warp-cli` by following steps from [1.1.1.1 for Linux page](https://developers.cloudflare.com/warp-client/get-started/linux/).
 * Run `warp-cli register` on terminal to use the WARP service on official cloudflare servers.
 
+---
+
 ### Installation
 
 #### Using GNOME Extensions (recommended)
 Extension page link: [https://extensions.gnome.org/extension/4670/cloudflare-1111-warp-switcher/](https://extensions.gnome.org/extension/4670/cloudflare-1111-warp-switcher/)
+
+---
 
 #### Manual Installation
 Download the extension package by cloning this repository, or downloading and extracting zip.
@@ -44,4 +49,4 @@ Finlly, activate `Cloudflare 1.1.1.1 WARP Switcher` from GNOME Extensions app, o
 $ gnome-extensions enable cloudflare-warp-gnome@harshan01
 ```
 
-That's it!
+**That's it!**
