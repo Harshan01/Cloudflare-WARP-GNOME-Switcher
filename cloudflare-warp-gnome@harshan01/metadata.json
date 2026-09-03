@@ -7,9 +7,11 @@
         "3.38",
         "40",
         "41",
-        "42"
+        "42",
+        "43",
+        "44"
     ],
     "url" : "https://github.com/Harshan01/Cloudflare-WARP-GNOME-Switcher",
     "uuid" : "cloudflare-warp-gnome@harshan01",
-    "version" : 4
+    "version" : 5
 }
